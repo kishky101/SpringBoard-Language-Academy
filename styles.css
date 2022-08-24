@@ -471,7 +471,7 @@ container 1_1
 
   body .container1_1 {
       height: 90vh;
-      background:linear-gradient( to bottom,rgb(99, 66, 198), rgba(99, 66, 198, 0.5), #8BCBF9);
+      background: var(--background);
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -501,6 +501,12 @@ container 1_1
       font-size: 2.3rem;
       animation: color 10s ease-in-out infinite;
   }
+
+    @media screen and (max-width: 300px) {
+      .intro-anime {
+        font-size: 1.8rem;
+      }
+    }
   
   @keyframes color {
       0% {
