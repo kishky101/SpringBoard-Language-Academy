@@ -4,7 +4,7 @@ Fonts
 ===============
 */
 @import url('https://fonts.googleapis.com/css?family=Open+Sans|Roboto:400,700&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Shade&display=swap');
 /*
 =============== 
 Variables
@@ -45,6 +45,7 @@ Variables
   --clr-black: #222;
   --ff-primary: 'Roboto', sans-serif;
   --ff-secondary: 'Open Sans', sans-serif;
+  --ff-tertiary:  'Bungee Shade', cursive;
   --transition: all 0.3s linear;
   --spacing: 0.1rem;
   --radius: 0.25rem;
@@ -248,8 +249,13 @@ nav {
   .social-icons a:hover {
     color: var(--clr-primary-7);
   }
-
-  /* container 3 */
+  
+ 
+  /*
+=============== 
+container 3 for bigger screens > 800px
+===============
+*/
 
   .program_view {
     display: flex;
@@ -266,7 +272,11 @@ nav {
     justify-content: center;
   }
 
-  /* container 4 */
+  /*
+=============== 
+container 4 for bigger screens >800px
+===============
+*/
 
   .container4 .course_list {
     display: grid;
@@ -304,6 +314,12 @@ nav {
 
   
 }
+
+/*
+=============== 
+container 5 for bigger screens
+===============
+*/
 
 @media screen and (min-width: 1200px) {
   /* container 5 */
@@ -427,7 +443,93 @@ nav {
 }
 
 
-/* container1 */
+/*
+=============== 
+container 1_1
+===============
+*/
+
+.container1_1{
+  font-family: var(--ff-tertiary);
+  text-align: center;
+  font-size: 2rem;
+  color: white;
+  overflow: hidden; 
+}
+
+.triangles {
+  display: none;
+}
+
+
+@media  screen and (max-width: 600px)  {
+
+  body .container1 {
+    display: none;
+  }
+
+
+  body .container1_1 {
+      height: 90vh;
+      background:linear-gradient( to bottom,rgb(99, 66, 198), rgba(99, 66, 198, 0.5), #8BCBF9);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin-top: -7px;
+      z-index: -1;
+      position: relative;
+    }
+  
+    .box {
+      height: 50vh;
+    }
+  
+    .triangles {
+      display: inline-block;
+      height: 100px;
+      width: 100px;
+    }
+  
+    intro {
+     margin-top: -100px;
+      
+    }
+
+    .intro-anime {
+      font-family: var(--ff-tertiary);
+      font-size: 3rem;
+      animation: color 10s ease-in-out infinite;
+  }
+  
+  @keyframes color {
+      0% {
+          color: #fff;
+      }
+      50% {
+          color: #000;
+      }
+      100% {
+          color: #00f;
+      }
+  }
+}
+
+
+
+/*
+=============== 
+container 1
+===============
+*/
+
+ /* container 1_1 */
+
+ .container1_1 {
+  display: none;
+}
+
+
 
 .container1 {
   height: 90vh;
@@ -461,7 +563,12 @@ nav {
   fill: var(--clr-grey-10);
 }
 
-/* container 2 */
+
+/*
+=============== 
+container 2
+===============
+*/
 
 .container2 {
   height: 60vh;
@@ -514,7 +621,13 @@ nav {
   fill: var(--clr-grey-10);
 }
 
-/* container 3 */
+
+
+/*
+=============== 
+container 3
+===============
+*/
 
 .container3 {
   display: flex;
@@ -599,7 +712,13 @@ nav {
   fill: var(--clr-grey-10);
 }
 
-/* container 4 */
+
+/*
+=============== 
+container 4
+===============
+*/
+
 .container4 {
   position: relative;
 }
@@ -667,7 +786,13 @@ nav {
   fill: var(--clr-primary-10);
 }
 
-/* container 5 */
+
+
+/*
+=============== 
+container 5
+===============
+*/
 
 .container5 {
   display: none;
@@ -802,7 +927,11 @@ p {
 }
 
 
-/* container 6 */
+/*
+=============== 
+container 6
+===============
+*/
 
 .container6 {
   height: 50vh;
@@ -842,7 +971,11 @@ p {
 }
 
 
-/* container 7 */
+/*
+=============== 
+container 7
+===============
+*/
 
 .container7 {
   height: 55vh;
@@ -911,7 +1044,11 @@ p {
   fill: #000000;
 }
 
-/* container 8 */
+/*
+=============== 
+container 8
+===============
+*/
 
 .container8 {
   background: var(--background2);
