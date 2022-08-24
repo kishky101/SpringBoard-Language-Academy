@@ -455,12 +455,12 @@ container 1_1
   font-size: 2rem;
   color: white;
   overflow: hidden; 
+  z-index: 9;
 }
 
 .triangles {
   display: none;
 }
-
 
 @media  screen and (max-width: 600px)  {
 
@@ -498,7 +498,7 @@ container 1_1
 
     .intro-anime {
       font-family: var(--ff-tertiary);
-      font-size: 3rem;
+      font-size: 2.3rem;
       animation: color 10s ease-in-out infinite;
   }
   
@@ -512,6 +512,10 @@ container 1_1
       100% {
           color: #00f;
       }
+  }
+
+  .custom-shape-divider-bottom-1660690671 {
+    z-index: -1;
   }
 }
 
@@ -815,7 +819,7 @@ container 5
 }
 
 .review_cards {
-  height: 75vh;
+  height: 75%;
   width: 90vw;
   display: flex;
   flex-direction: column;
@@ -1088,3 +1092,16 @@ container 8
 }
 
 
+@media screen and (orientation: landscape) {
+
+  .container1,  .container7 {
+    height: 150vh;
+  }
+  .container2, .container3, .container5_1 {
+    height: 200vh;
+  }
+
+  .container6 {
+    height: 100vh;
+  }
+}
