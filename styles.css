@@ -55,6 +55,7 @@ Variables
   --fixed-width: 620px;
   --background: linear-gradient( to bottom,rgb(99, 66, 198), rgba(99, 66, 198, 0.5), #8BCBF9);
   --background2: linear-gradient( to top,rgb(99, 66, 198), rgba(99, 66, 198, 0.5), #8BCBF9);
+
 }
 /*
 =============== 
@@ -75,6 +76,7 @@ body {
   color: var(--clr-grey-1);
   line-height: 1.5;
   font-size: 0.875rem;
+   /* font-size: 1.4rem; */
   position: relative;
 }
 ul {
@@ -211,6 +213,18 @@ nav {
 .show-links {
   height: 12.5rem;
 }
+
+.nav-toggle.hide {
+  display: none;
+}
+
+.nav-center.active .show{
+  display: none;
+}
+.nav-center.active .hide{
+  display: block;
+}
+
 @media screen and (min-width: 800px) {
   .nav-center {
     max-width: 1170px;
@@ -251,6 +265,16 @@ nav {
   }
   
  
+  /*
+=============== 
+container 2 for bigger screens > 800px
+===============
+*/
+
+  .container2 .about h2 {
+  margin-top: 3rem;
+  }
+
   /*
 =============== 
 container 3 for bigger screens > 800px
@@ -470,7 +494,7 @@ container 1_1
 
 
   body .container1_1 {
-      height: 90vh;
+      height: 30rem;
       background: var(--background);
       display: flex;
       flex-direction: column;
@@ -542,7 +566,7 @@ container 1
 
 
 .container1 {
-  height: 90vh;
+  height: 30rem;
   background: var(--background);
   display: flex;
   justify-content: center;
@@ -581,7 +605,7 @@ container 2
 */
 
 .container2 {
-  height: 60vh;
+  height: 100%;
   text-align: center;
   position: relative;
   font-family: var(--ff-primary);
@@ -595,6 +619,7 @@ container 2
 .container2 .about {
   width: 75vw;
   z-index: 9;
+  margin: auto;
 }
 
 .purple {
@@ -643,7 +668,7 @@ container 3
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 90vh;
+  height: 43.5rem;
   text-align: center;
   background: var(--background2);
   position: relative;
@@ -662,7 +687,7 @@ container 3
   box-shadow: 2px 3px 5px;
 }
 
-.class:hover {
+.class:hover, .class:focus{
   cursor: pointer;
   transition: var(--transition);
   transform: translate(-20px, -10px);
@@ -816,7 +841,7 @@ container 5
   align-items: center;
   flex-direction: column;
   background: var(--background2);
-  height: 100vh;
+  height: 55rem;
   position: relative;
 }
 
@@ -944,7 +969,7 @@ container 6
 */
 
 .container6 {
-  height: 50vh;
+  height: 25rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -988,7 +1013,7 @@ container 7
 */
 
 .container7 {
-  height: 55vh;
+  height: 30rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1095,19 +1120,4 @@ container 8
 
 .container8 .kishky:hover:active {
   transform: scale(0.98);
-}
-
-
-@media screen and (orientation: landscape) {
-
-  .container1,  .container7 {
-    height: 150vh;
-  }
-  .container2, .container3, .container5_1 {
-    height: 200vh;
-  }
-
-  .container6 {
-    height: 100vh;
-  }
 }

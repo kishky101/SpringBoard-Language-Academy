@@ -6,11 +6,25 @@
 
 // Navigation js
 const links = document.querySelector(".links");
-const button = document.querySelector(".nav-toggle");
+const buttton = document.querySelector(".nav-toggle")
+const showButton = document.querySelector(".show");
+const hideButton = document.querySelector(".hide")
+const navCenter = document.querySelector(".nav-center")
 
-button.addEventListener("click", function () {
-  return links.classList.toggle("show-links");
+ 
+
+showButton.addEventListener("click", function () {      
+        links.classList.add("show-links");
+        navCenter.classList.add("active");
 });
+
+
+
+hideButton.addEventListener("click", function () {
+        links.classList.remove("show-links");
+        navCenter.classList.remove("active")
+});
+
 
 
 
