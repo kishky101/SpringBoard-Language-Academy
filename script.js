@@ -52,56 +52,32 @@ const data = [
   {
     albumId: 1,
     id: 1,
-    name: "David Samuel",
-    title:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit.Repellendus deleniti eveniet ea, dolorem sed ipsum sequi fuga magni asperiores expedita tenetur accusamus quibusdam adipisci distinctio ratione enim autem similique voluptas debitis incidunt repellat pariatur quos iure. Obcaecati cum maiores necessitatibus autem,quod iusto nihil vitae dolorum velit maxime consequatur explicabo!",
-    url: "https://via.placeholder.com/600/92c952",
-    thumbnailUrl: "https://via.placeholder.com/150/92c952",
+    name: "David Samuel"
   },
   {
     albumId: 1,
     id: 2,
-    name: "David john",
-    title:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit.Repellendus deleniti eveniet ea, dolorem sed ipsum sequi fuga magni asperiores expedita tenetur accusamus quibusdam adipisci distinctio ratione enim autem similique voluptas debitis incidunt repellat pariatur quos iure. Obcaecati cum maiores necessitatibus autem,quod iusto nihil vitae dolorum velit maxime consequatur explicabo!",
-    url: "https://via.placeholder.com/600/771796",
-    thumbnailUrl: "https://via.placeholder.com/150/771796",
+    name: "David john"
   },
   {
     albumId: 1,
     id: 3,
-    name: "mary Samuel",
-    title:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit.Repellendus deleniti eveniet ea, dolorem sed ipsum sequi fuga magni asperiores expedita tenetur accusamus quibusdam adipisci distinctio ratione enim autem similique voluptas debitis incidunt repellat pariatur quos iure. Obcaecati cum maiores necessitatibus autem,quod iusto nihil vitae dolorum velit maxime consequatur explicabo!",
-    url: "https://via.placeholder.com/600/24f355",
-    thumbnailUrl: "https://via.placeholder.com/150/24f355",
+    name: "mary Samuel"
   },
   {
     albumId: 1,
     id: 4,
-    name: "jonatan Samuel",
-    title:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit.Repellendus deleniti eveniet ea, dolorem sed ipsum sequi fuga magni asperiores expedita tenetur accusamus quibusdam adipisci distinctio ratione enim autem similique voluptas debitis incidunt repellat pariatur quos iure. Obcaecati cum maiores necessitatibus autem,quod iusto nihil vitae dolorum velit maxime consequatur explicabo!",
-    url: "https://via.placeholder.com/600/d32776",
-    thumbnailUrl: "https://via.placeholder.com/150/d32776",
+    name: "jonatan Samuel"
   },
   {
     albumId: 1,
     id: 5,
-    name: "David peterson",
-    title:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit.Repellendus deleniti eveniet ea, dolorem sed ipsum sequi fuga magni asperiores expedita tenetur accusamus quibusdam adipisci distinctio ratione enim autem similique voluptas debitis incidunt repellat pariatur quos iure. Obcaecati cum maiores necessitatibus autem,quod iusto nihil vitae dolorum velit maxime consequatur explicabo!",
-    url: "https://via.placeholder.com/600/f66b97",
-    thumbnailUrl: "https://via.placeholder.com/150/f66b97",
+    name: "David peterson"
   },
   {
     albumId: 1,
     id: 6,
-    name: "simon williams",
-    title:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit.Repellendus deleniti eveniet ea, dolorem sed ipsum sequi fuga magni asperiores expedita tenetur accusamus quibusdam adipisci distinctio ratione enim autem similique voluptas debitis incidunt repellat pariatur quos iure. Obcaecati cum maiores necessitatibus autem,quod iusto nihil vitae dolorum velit maxime consequatur explicabo!",
-    url: "https://via.placeholder.com/600/56a8c2",
-    thumbnailUrl: "https://via.placeholder.com/150/56a8c2",
+    name: "simon williams"
   },
 ];
 
@@ -123,11 +99,14 @@ function scrollReviews() {
 
   let result = `
         <div class="image-container">
-            <img src=${currnetData.url} alt="id_${currnetData.id}" class="image">
+          <div class="image-container_2">
+            <i class="fa-solid fa-user user_icon"></i>
+          </div>
         </div>
         <div class="title">
             <h2 id="name">${currnetData.name}</h2>
-            <p id="paragraph">${currnetData.title}</p>
+            <small>Medical Doctor</small>
+            <p id="paragraph">"Lorem ipsum dolor sit amet consectetur adipisicing elit.Repellendus deleniti eveniet ea, dolorem sed ipsum sequi fuga",</p>
         </div>
     `;
 

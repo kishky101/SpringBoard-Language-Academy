@@ -4,7 +4,7 @@ Fonts
 ===============
 */
 @import url('https://fonts.googleapis.com/css?family=Open+Sans|Roboto:400,700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Bungee+Shade&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Bungee+Shade&display=swap'); */
 /*
 =============== 
 Variables
@@ -170,6 +170,7 @@ nav {
   align-items: center;
   justify-content: space-between;
   padding: 0rem;
+  margin: auto 1rem ;
 }
 .nav-toggle {
   font-size: 1.5rem;
@@ -366,12 +367,18 @@ container 5 for bigger screens
     margin: 0;
     height: 100vh;
     overflow: hidden;
-    background: var(--background2);
+    background: var(--clr-primary-8);
   } 
 
   .container5 .grey {
-    color: var(--clr-grey-4);
+    color: var(--clr-grey-9);
   }
+  
+  .container5 .purple {
+    color: var(--clr-grey-10);
+  }
+
+  
   
   .review_container {
      display: flex;
@@ -473,7 +480,7 @@ container 1_1
 */
 
 .container1_1{
-  font-family: var(--ff-tertiary);
+  font-family: var(--ff-primary);
   text-align: center;
   font-size: 2rem;
   color: white;
@@ -491,7 +498,7 @@ container 1_1
   font-size: 20px;
   font-family: var(--ff-primary);
   color: var(--clr-primary-8);
-  box-shadow: 3px 2px 5px #fff;
+  /* box-shadow: 3px 2px 5px #fff; */
   user-select: none; 
   cursor: pointer;
   padding: 20px;
@@ -510,7 +517,7 @@ container 1_1
 
   body .container1_1 {
       height: 30rem;
-      background: var(--background);
+      background-color: var(--clr-primary-8);
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -519,23 +526,23 @@ container 1_1
       position: relative;
     }
 
-    .box {
-      height: 50vh;
+    /* .box {
+      height: ;
     }
-  
+   */
     .triangles {
       display: inline-block;
       height: 100px;
       width: 100px;
     }
-  
-    intro {
+/*   
+    .intro {
      margin-top: -100px;
       
-    }
+    } */
 
     .intro-anime {
-      font-family: var(--ff-tertiary);
+      font-family: var(--ff-primary);
       font-size: 2.3rem;
       animation: color 10s ease-in-out infinite;
   }
@@ -559,9 +566,15 @@ container 1_1
     align-items: flex-end;
   }
 
-  body .container1 {
-    border-bottom: transparent;
+  .container6 #paragraph {
+    margin: 0px;
   }
+
+  /* body .container1 {
+    border-bottom: transparent;
+  } */
+
+
 }
 
 /*
@@ -580,7 +593,7 @@ container 1
 
 .container1 {
   height: 40rem;
-  background: var(--background);
+  background: var(--clr-primary-8);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -687,7 +700,7 @@ container 3
   align-items: center;
   height: 43.5rem;
   text-align: center;
-  background: var(--background2);
+  background: var(--clr-primary-8);
   position: relative;
 }
 
@@ -701,7 +714,6 @@ container 3
   border: 1px outset var(--clr-grey-6);
   margin: 20px;
   color: #ffffff;
-  box-shadow: 2px 3px 5px;
 }
 
 .class:hover, .class:focus{
@@ -721,7 +733,11 @@ container 3
 }
 
 .container3 .grey {
-  color: var(--clr-grey-4);
+  color: var(--clr-grey-9);
+}
+
+.container3 .purple {
+  color: var(--clr-grey-10);
 }
 
 .custom-shape-divider-top-1660727270 {
@@ -785,9 +801,9 @@ container 4
 .course_card {
   display: flex;
   width: 90vw;
-  gap: 10px;
+  gap: 1.5rem;
   border: 2px groove var(--clr-primary-8);
-  margin: 10px;
+  margin: 1rem;
   border-radius: 10px;
   padding: 20px;
 }
@@ -799,6 +815,14 @@ container 4
 
 .container4 h3 {
   color: var(--clr-primary-8);
+}
+
+.quran_section {
+  text-align: left;
+}
+
+.container4 p {
+  text-align: left;
 }
 
 .container4 .grey {
@@ -857,13 +881,17 @@ container 5
   justify-content: flex-end;
   align-items: center;
   flex-direction: column;
-  background: var(--background2);
-  height: 55rem;
+  background: var(--clr-primary-8);
+  height: 50rem;
   position: relative;
 }
 
 .container5_1 .grey {
-  color: var(--clr-grey-4);
+  color: var(--clr-grey-9);
+}
+
+.container5_1 .purple {
+  color: var(--clr-grey-10);
 }
 
 .review_cards {
@@ -907,12 +935,14 @@ container 5
   justify-content: center;
   align-items: center;
   background-color: var(--clr-grey-10);
-  height: 60%;
+  height: 50%;
   width: 80vw;
   border-radius: 10px;
   border-top-left-radius: 10px;
   margin-top: -30px;
 }
+
+
 
 .review_header {
   z-index: 9;
@@ -933,9 +963,34 @@ h2 {
   color: var(--clr-primary-8);
 }
 
+#paragraph {
+  margin: 1rem;
+}
+
 p {
   text-justify: center;
   text-align: center;
+  /* margin: 1rem ; */
+}
+
+.image-container_2 {
+  width: 10rem;
+  height: 10rem;
+  border-radius: 50%;
+  /* border: 1px solid red; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--clr-grey-10);
+}
+
+.user_icon {
+  color: var(--clr-primary-8);
+  font-size: 50px;
+}
+
+.buttons {
+  margin-top: -5rem;
 }
 
 .btn {
@@ -989,7 +1044,7 @@ container 6
   height: 25rem;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-end;
   position: relative;
 }
 
@@ -998,6 +1053,7 @@ container 6
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  /* margin: 1rem 3rem; */
 }
 
 .container6 .grey {
@@ -1006,6 +1062,10 @@ container 6
 
 .container6 .purple {
   color: var(--clr-primary-8);
+}
+
+.container6 p {
+  margin: 1rem;
 }
 
 .container6 .btn_2 {
@@ -1080,20 +1140,22 @@ container 7
 
 .space:hover p{
   color:  var(--clr-grey-10);
+  text-align: left;
 }
 
 .container7 h3 {
   text-align: center;
   color:  var(--clr-primary-8);
-  font-size: 25px;
+  font-size: 1.5rem;
 }
 
 .container7 p {
-  font-size: 20px;
+  font-size: 1rem;
+  text-align: left;
 }
 
 .container7 i {
-  font-size: 30px;
+  font-size: 1.2rem;
   color: var(--clr-primary-8);
 }
 
@@ -1164,4 +1226,8 @@ container 8
 
 .container8 .kishky:hover:active {
   transform: scale(0.98);
+}
+
+@media screen and (max-width : 300px) {
+  
 }
