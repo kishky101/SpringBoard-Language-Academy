@@ -3,7 +3,7 @@
 Fonts
 ===============
 */
-@import url('https://fonts.googleapis.com/css?family=Open+Sans|Roboto:400,700&display=swap');
+@import url("https://fonts.googleapis.com/css?family=Open+Sans|Roboto:400,700&display=swap");
 /* @import url('https://fonts.googleapis.com/css2?family=Bungee+Shade&display=swap'); */
 /*
 =============== 
@@ -22,7 +22,7 @@ Variables
   /* lighter shades of primary color */
   --clr-primary-6: hsl(205, 89%, 70%);
   --clr-primary-7: hsl(205, 90%, 76%);
-  --clr-primary-8:rgb(99, 66, 198);
+  --clr-primary-8: rgb(99, 66, 198);
   --clr-primary-9: hsl(205, 90%, 88%);
   --clr-primary-10: hsl(205, 100%, 96%);
   /* darkest grey - used for headings */
@@ -43,9 +43,9 @@ Variables
   --clr-green-dark: hsl(125, 67%, 44%);
   --clr-green-light: hsl(125, 71%, 66%);
   --clr-black: #222;
-  --ff-primary: 'Roboto', sans-serif;
-  --ff-secondary: 'Open Sans', sans-serif;
-  --ff-tertiary:  'Bungee Shade', cursive;
+  --ff-primary: "Roboto", sans-serif;
+  --ff-secondary: "Open Sans", sans-serif;
+  --ff-tertiary: "Bungee Shade", cursive;
   --transition: all 0.3s linear;
   --spacing: 0.1rem;
   --radius: 0.25rem;
@@ -53,9 +53,18 @@ Variables
   --dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
   --max-width: 1170px;
   --fixed-width: 620px;
-  --background: linear-gradient( to bottom,rgb(99, 66, 198), rgba(99, 66, 198, 0.5), #8BCBF9);
-  --background2: linear-gradient( to top,rgb(99, 66, 198), rgba(99, 66, 198, 0.5), #8BCBF9);
-
+  --background: linear-gradient(
+    to bottom,
+    rgb(99, 66, 198),
+    rgba(99, 66, 198, 0.5),
+    #8bcbf9
+  );
+  --background2: linear-gradient(
+    to top,
+    rgb(99, 66, 198),
+    rgba(99, 66, 198, 0.5),
+    #8bcbf9
+  );
 }
 /*
 =============== 
@@ -145,6 +154,14 @@ p {
   margin: 0 auto;
   max-width: 1170px;
 }
+
+
+/*
+=============== 
+media query for bigger screens >992px
+===============
+*/
+
 @media screen and (min-width: 992px) {
   .section-center {
     width: 95vw;
@@ -170,7 +187,7 @@ nav {
   align-items: center;
   justify-content: space-between;
   padding: 0rem;
-  margin: auto 1rem ;
+  margin: auto 1rem;
 }
 .nav-toggle {
   font-size: 1.5rem;
@@ -218,12 +235,19 @@ nav {
   display: none;
 }
 
-.nav-center.active .show{
+.nav-center.active .show {
   display: none;
 }
-.nav-center.active .hide{
+.nav-center.active .hide {
   display: block;
 }
+
+
+/*
+=============== 
+media query for bigger screens >800px
+===============
+*/
 
 @media screen and (min-width: 800px) {
   .nav-center {
@@ -263,8 +287,17 @@ nav {
   .social-icons a:hover {
     color: var(--clr-primary-7);
   }
-  
- 
+
+  /*
+=============== 
+container 1_1 for bigger screens > 800px
+===============
+*/
+
+  .container1_1 .intro-anime {
+    font-size: 4rem;
+  }
+
   /*
 =============== 
 container 2 for bigger screens > 800px
@@ -272,7 +305,7 @@ container 2 for bigger screens > 800px
 */
 
   .container2 .about h2 {
-  margin-top: 3rem;
+    margin-top: 3rem;
   }
 
   /*
@@ -335,18 +368,29 @@ container 4 for bigger screens >800px
   .container4 .quran_section {
     width: 500px;
   }
-
-  
 }
 
 /*
 =============== 
-container 5 for bigger screens
+media query for bigger screens >1200px
 ===============
 */
 
 @media screen and (min-width: 1200px) {
-  /* container 5 */
+  /*
+=============== 
+container 1_1 for bigger screens >1200px
+===============
+*/
+  .container1_1 .intro-anime {
+    font-size: 5rem;
+  }
+
+ /*
+=============== 
+container 5 for bigger screens >1200px
+===============
+*/
 
   body .container5 {
     display: flex;
@@ -368,30 +412,28 @@ container 5 for bigger screens
     height: 100vh;
     overflow: hidden;
     background: var(--clr-primary-8);
-  } 
+  }
 
   .container5 .grey {
     color: var(--clr-grey-9);
   }
-  
+
   .container5 .purple {
     color: var(--clr-grey-10);
   }
 
-  
-  
   .review_container {
-     display: flex;
-     flex-direction: column; 
-     width: 90vw;
+    display: flex;
+    flex-direction: column;
+    width: 90vw;
   }
-  
+
   .panel {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 80vh;
-    border-radius: 50px;       
+    border-radius: 50px;
     cursor: pointer;
     flex: 0.5;
     margin: 10px;
@@ -422,21 +464,24 @@ container 5 for bigger screens
     flex: 5;
   }
 
-  /* container 5_1 */
+  /*
+=============== 
+container 5_1 for bigger screens >1200px
+===============
+*/
 
   body .container5_1 {
     display: none;
   }
 
   .container5 .inner-container_1 {
-    height:100%;
+    height: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     border-radius: 50px;
     position: reletive;
-    /* background-color: #fff; */
   }
 
   .image-container_1 {
@@ -449,7 +494,7 @@ container 5 for bigger screens
     justify-content: center;
     border-radius: 50px;
     border-bottom-right-radius: 0px;
-    border-bottom-left-radius: 0px; 
+    border-bottom-left-radius: 0px;
   }
 
   .panel .image {
@@ -472,6 +517,59 @@ container 5 for bigger screens
   }
 }
 
+/*
+=============== 
+media query for smaller screens <350px
+===============
+*/
+
+@media screen and (max-width: 350px) {
+  .triangles {
+    display: inline-block;
+    height: 50px;
+    width: 50px;
+  }
+
+  .non_inverted1 {
+    margin-right: -30px;
+  }
+
+  .non_inverted2 {
+    margin-left: -30px;
+  }
+
+  .container1_1 .intro-anime {
+    font-size: 1.8rem;
+  }
+
+  .container7 h3 {
+    text-align: center;
+    color: var(--clr-primary-8);
+    font-size: 1.3rem;
+  }
+
+  .container7 p,
+  a {
+    font-size: 0.75rem;
+  }
+}
+
+/*
+=============== 
+media query for smaller screens <300px
+===============
+*/
+
+@media screen and (max-width: 300px) {
+  body .container6 {
+    display: flex;
+    align-items: flex-end;
+  }
+
+  .container6 #paragraph {
+    margin: 0px;
+  }
+}
 
 /*
 =============== 
@@ -479,14 +577,46 @@ container 1_1
 ===============
 */
 
-.container1_1{
+.container1_1 {
   font-family: var(--ff-primary);
   text-align: center;
   font-size: 2rem;
   color: white;
-  overflow: hidden; 
+  overflow: hidden;
   z-index: 9;
   user-select: none;
+  height: 30rem;
+  background-color: var(--clr-primary-8);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: -7px;
+  position: relative;
+}
+
+.triangles {
+  display: inline-block;
+  height: 70px;
+  width: 70px;
+}
+
+.inverted {
+  transform: rotate(180deg);
+  margin-bottom: 25px;
+}
+
+.non_inverted1 {
+  margin-right: -40px;
+}
+
+.non_inverted2 {
+  margin-left: -40px;
+}
+
+.intro-anime {
+  font-family: var(--ff-primary);
+  font-size: 3rem;
 }
 
 .btn a {
@@ -498,130 +628,7 @@ container 1_1
   font-size: 20px;
   font-family: var(--ff-primary);
   color: var(--clr-primary-8);
-  /* box-shadow: 3px 2px 5px #fff; */
-  user-select: none; 
-  cursor: pointer;
-  padding: 20px;
-}
-
-.triangles {
-  display: none;
-}
-
-@media  screen and (max-width: 600px)  {
-
-  body .container1 {
-    display: none;
-  }
-
-
-  body .container1_1 {
-      height: 30rem;
-      background-color: var(--clr-primary-8);
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      margin-top: -7px;
-      position: relative;
-    }
-
-    /* .box {
-      height: ;
-    }
-   */
-    .triangles {
-      display: inline-block;
-      height: 100px;
-      width: 100px;
-    }
-/*   
-    .intro {
-     margin-top: -100px;
-      
-    } */
-
-    .intro-anime {
-      font-family: var(--ff-primary);
-      font-size: 2.3rem;
-      animation: color 10s ease-in-out infinite;
-  }
-
-    @media screen and (max-width: 300px) {
-      .intro-anime {
-        font-size: 1.8rem;
-      }
-    }
-
-
-  .custom-shape-divider-bottom-1660690671 {
-    z-index: -1;
-  }
-}
-
-@media screen and (max-width: 300px) {
-
-  body .container6 {
-    display: flex;
-    align-items: flex-end;
-  }
-
-  .container6 #paragraph {
-    margin: 0px;
-  }
-
-  /* body .container1 {
-    border-bottom: transparent;
-  } */
-
-
-}
-
-/*
-=============== 
-container 1
-===============
-*/
-
- /* container 1_1 */
-
- .container1_1 {
-  display: none;
-}
-
-
-
-.container1 {
-  height: 40rem;
-  background: var(--clr-primary-8);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: -7px;
-  /* z-index: -1; */
-  position: relative;
-}
-
-
-
-.first-button {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.first_svg {
-  width: 90vw;
-  height: 100%;
-}
-
-.container1 .btn_2 {
-  font-size: 20px;
-  font-family: var(--ff-primary);
-  color: var(--clr-primary-8);
-  box-shadow: 3px 2px 5px #fff;
-  user-select: none; 
+  user-select: none;
   cursor: pointer;
   padding: 20px;
 }
@@ -646,7 +653,6 @@ container 1
 .custom-shape-divider-bottom-1660690671 .shape-fill {
   fill: var(--clr-grey-10);
 }
-
 
 /*
 =============== 
@@ -678,15 +684,11 @@ container 2
 
 .container2 .purple {
   color: var(--clr-primary-8);
-  
 }
 
 .container2 .grey {
   color: var(--clr-grey-7);
 }
-
-
-
 
 /*
 =============== 
@@ -716,7 +718,8 @@ container 3
   color: #ffffff;
 }
 
-.class:hover, .class:focus{
+.class:hover,
+.class:focus {
   cursor: pointer;
   transition: var(--transition);
   transform: translate(-20px, -10px);
@@ -780,7 +783,6 @@ container 3
   fill: var(--clr-grey-10);
 }
 
-
 /*
 =============== 
 container 4
@@ -808,7 +810,7 @@ container 4
   padding: 20px;
 }
 
-.container4 i{
+.container4 i {
   font-size: 40px;
   color: var(--clr-primary-8);
 }
@@ -862,11 +864,9 @@ container 4
   fill: var(--clr-primary-10);
 }
 
-
-
 /*
 =============== 
-container 5
+container 5_1
 ===============
 */
 
@@ -919,7 +919,7 @@ container 5
   justify-content: center;
   border-radius: 20px;
   border-bottom-right-radius: 0;
-  border-bottom-left-radius: 0px; 
+  border-bottom-left-radius: 0px;
 }
 
 .image {
@@ -941,8 +941,6 @@ container 5
   border-top-left-radius: 10px;
   margin-top: -30px;
 }
-
-
 
 .review_header {
   z-index: 9;
@@ -1033,7 +1031,6 @@ p {
   fill: var(--clr-grey-10);
 }
 
-
 /*
 =============== 
 container 6
@@ -1053,7 +1050,6 @@ container 6
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  /* margin: 1rem 3rem; */
 }
 
 .container6 .grey {
@@ -1078,8 +1074,9 @@ container 6
   padding: 20px;
 }
 
-.container6 .btn:hover, .btn:active {
-  box-shadow: 2px 4px 5px  #000;
+.container6 .btn:hover,
+.btn:active {
+  box-shadow: 2px 4px 5px #000;
   transition: var(--transition);
 }
 
@@ -1104,7 +1101,6 @@ container 6
   fill: var(--clr-primary-8);
 }
 
-
 /*
 =============== 
 container 7
@@ -1127,25 +1123,25 @@ container 7
 
 .container7 .space:hover {
   background-color: var(--clr-primary-8);
-  color:  var(--clr-primary-8);
+  color: var(--clr-primary-8);
   transition: var(--transition);
 }
-.space:hover h3{
-  color:  var(--clr-grey-10);
+.space:hover h3 {
+  color: var(--clr-grey-10);
 }
 
-.space:hover i{
-  color:  var(--clr-grey-10);
+.space:hover i {
+  color: var(--clr-grey-10);
 }
 
-.space:hover p{
-  color:  var(--clr-grey-10);
+.space:hover p {
+  color: var(--clr-grey-10);
   text-align: left;
 }
 
 .container7 h3 {
   text-align: center;
-  color:  var(--clr-primary-8);
+  color: var(--clr-primary-8);
   font-size: 1.5rem;
 }
 
@@ -1199,7 +1195,6 @@ container 8
   /* margin-top: 30px; */
 }
 
-
 .container8 p {
   color: var(--clr-grey-10);
 }
@@ -1226,8 +1221,4 @@ container 8
 
 .container8 .kishky:hover:active {
   transform: scale(0.98);
-}
-
-@media screen and (max-width : 300px) {
-  
 }
