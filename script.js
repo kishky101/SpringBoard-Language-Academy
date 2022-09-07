@@ -4,26 +4,40 @@
 // remove - remove class
 // toggle - toggles class
 
+const navItem = document.querySelector('.nav_item');
+const body = document.querySelector('body')
+console.log(body)
+navItem.addEventListener('click', () => {
+  navItem.classList.toggle('active1')
+  if(innerWidth < 950 && navItem.classList.contains('active1')) {
+    console.log(true)
+    body.style.overflowY = 'hidden'
+  }else {
+    body.style.overflowY = 'scroll'
+  }
+})
+
+console.log(innerWidth)
 // Navigation js
-const links = document.querySelector(".links");
-const buttton = document.querySelector(".nav-toggle")
-const showButton = document.querySelector(".show");
-const hideButton = document.querySelector(".hide")
-const navCenter = document.querySelector(".nav-center")
+// const links = document.querySelector(".links");
+// const buttton = document.querySelector(".nav-toggle")
+// const showButton = document.querySelector(".show");
+// const hideButton = document.querySelector(".hide")
+// const navCenter = document.querySelector(".nav-center")
 
  
 
-showButton.addEventListener("click", function () {      
-        links.classList.add("show-links");
-        navCenter.classList.add("active");
-});
+// showButton.addEventListener("click", function () {      
+//         links.classList.add("show-links");
+//         navCenter.classList.add("active");
+// });
 
 
 
-hideButton.addEventListener("click", function () {
-        links.classList.remove("show-links");
-        navCenter.classList.remove("active")
-});
+// hideButton.addEventListener("click", function () {
+//         links.classList.remove("show-links");
+//         navCenter.classList.remove("active")
+// });
 
 
 

@@ -86,6 +86,7 @@ body {
   line-height: 1.5;
   font-size: 0.875rem;
   position: relative;
+  overflow-x: hidden;
 }
 ul {
   list-style-type: none;
@@ -189,7 +190,7 @@ nav {
   padding: 0rem;
   margin: auto 1rem;
 }
-.nav-toggle {
+/* .nav-toggle {
   font-size: 1.5rem;
   color: rgb(99, 66, 198);
   background: transparent;
@@ -200,7 +201,7 @@ nav {
 .nav-toggle:hover {
   color: var(--clr-primary-1);
   transform: rotate(90deg);
-}
+} */
 .logo {
   height: 4rem;
   cursor: pointer;
@@ -219,19 +220,19 @@ nav {
   color: var(--clr-primary-5);
   padding-left: 1.5rem;
 }
-.social-icons {
+/* .social-icons {
   display: none;
-}
-.links {
-  height: 0;
+} */
+/*.links {
+   height: 0; 
   overflow: hidden;
   transition: var(--transition);
 }
-.show-links {
+/*.show-links {
   height: 12.5rem;
 }
 
-.nav-toggle.hide {
+ .nav-toggle.hide {
   display: none;
 }
 
@@ -240,16 +241,66 @@ nav {
 }
 .nav-center.active .hide {
   display: block;
+} */
+/* ------------------------ */
+.nav-center {
+  height: 12vh;
+}
+
+.nav_list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  position: absolute;
+  top: 9vh;
+  right: -100%;
+  background-color: #fff;
+  height: 92vh;
+  width: 90vw;
+  align-items: center;
+  transition: all 0.3s ;
+  z-index: 9;
+}
+
+.nav_list li {
+  width: 100%;
+  text-align: center;
+}
+
+.hambugger {
+  width: 1.8rem;
+  height: 1.5rem;
+  margin: 1rem;
+  cursor: pointer;
+}
+
+.bar {
+  width: 100%;
+  height: 0.15em;
+  background-color: #5A37C3;
+  margin: 0.5rem;
+  transition: all 0.3s ;
+}
+
+.nav_item.active1 .nav_list {
+  right: 0;
+  overflow-y: hidden;
+}
+
+.nav_item.active1 .hambugger .bar:nth-of-type(2) {
+  opacity: 0;
+}
+
+.nav_item.active1 .hambugger .bar:first-of-type {
+  transform: rotate(45deg) translate(0.8rem);
+}
+
+.nav_item.active1 .hambugger .bar:last-of-type {
+  transform: rotate(-45deg) translate(0.8rem);
 }
 
 
-/*
-=============== 
-media query for bigger screens >800px
-===============
-*/
-
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 950px) {
   .nav-center {
     max-width: 1170px;
     margin: 0 auto;
@@ -258,16 +309,43 @@ media query for bigger screens >800px
     justify-content: space-between;
     padding: 1rem;
   }
+
   .nav-header {
-    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0rem;
+    margin: auto 1rem;
   }
+
+  /* .nav-header {
+    padding: 0;
+  } */
   .nav-toggle {
     display: none;
   }
-  .links {
+  .links.nav_list {
     height: auto;
     display: flex;
   }
+
+  .nav_list {
+    flex-direction: row;
+    position: relative;
+    right: 0;
+    top: 0;
+    justify-content: flex-end;
+  }
+
+  .nav_list li {
+    width: auto;
+    text-align: center;
+  }
+
+  .hambugger {
+    display: none;
+  }
+
   .links a {
     padding: 0;
     margin: 0 0.5rem;
@@ -287,6 +365,79 @@ media query for bigger screens >800px
   .social-icons a:hover {
     color: var(--clr-primary-7);
   }
+
+}
+/*
+=============== 
+media query for bigger screens >800px
+===============
+*/
+
+@media screen and (min-width: 800px) {
+  /* .nav-center {
+    max-width: 1170px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+  }
+
+  .nav-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0rem;
+    margin: auto 1rem;
+  }
+
+  /* .nav-header {
+    padding: 0;
+  } 
+  .nav-toggle {
+    display: none;
+  }
+  .links.nav_list {
+    height: auto;
+    display: flex;
+  }
+
+  .nav_list {
+    flex-direction: row;
+    position: relative;
+    right: 0;
+    top: 0;
+    justify-content: flex-end;
+  }
+
+  .nav_list li {
+    width: auto;
+    text-align: center;
+  }
+
+  .hambugger {
+    display: none;
+  }
+
+  .links a {
+    padding: 0;
+    margin: 0 0.5rem;
+  }
+  .links a:hover {
+    padding: 0;
+    background: transparent;
+  }
+  .social-icons {
+    display: flex;
+  }
+  .social-icons a {
+    margin: 0 0.5rem;
+    color: var(--clr-primary-8);
+    transition: var(--transition);
+  }
+  .social-icons a:hover {
+    color: var(--clr-primary-7);
+  } */
 
   /*
 =============== 
@@ -583,7 +734,7 @@ container 1_1
   font-size: 2rem;
   color: white;
   overflow: hidden;
-  z-index: 9;
+  /* z-index: 9; */
   user-select: none;
   height: 30rem;
   background-color: var(--clr-primary-8);
