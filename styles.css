@@ -329,6 +329,10 @@ nav {
     display: flex;
   }
 
+  .links.nav_list a{
+    white-space:nowrap;
+  }
+
   .nav_list {
     flex-direction: row;
     position: relative;
@@ -516,9 +520,9 @@ container 4 for bigger screens >800px
     width: 30vw;
   }
 
-  .container4 .quran_section {
-    width: 500px;
-  }
+  /* .container4 .quran_section {
+    /* width: 500px; 
+  } */
 }
 
 /*
@@ -702,6 +706,7 @@ media query for smaller screens <350px
   .container7 p,
   a {
     font-size: 0.75rem;
+    white-space: nowrap;
   }
 }
 
@@ -953,12 +958,22 @@ container 4
 
 .course_card {
   display: flex;
+  flex-direction: column;
   width: 90vw;
   gap: 1.5rem;
   border: 2px groove var(--clr-primary-8);
   margin: 1rem;
   border-radius: 10px;
   padding: 20px;
+}
+
+.icon_subject_name {
+  display: flex;
+  gap: 0.7rem;
+}
+
+.icon_subject_name h3 {
+  margin-top: 00.5rem;
 }
 
 .container4 i {
